@@ -348,6 +348,68 @@ img { max-width: 100%; }
 
 .card-arrow { color: var(--accent); font-size: 1.1rem; }
 
+/* ---------- Speakers: track headings & keynote ---------- */
+.track-heading {
+  font-size: 1.15rem;
+  margin: 2.4rem 0 1rem;
+  padding-left: 0.9rem;
+  border-left: 4px solid var(--accent);
+}
+.track-heading:first-of-type { margin-top: 0; }
+
+.keynote-card {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 1.8rem;
+  align-items: start;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.keynote-card h3 { font-size: 1.3rem; margin: 0 0 0.3rem; }
+
+.keynote-card p { color: var(--muted); font-size: 0.95rem; margin: 0 0 0.5rem; }
+
+.keynote-role {
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.88rem;
+}
+
+.portrait-lg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: var(--radius);
+  font-size: 2rem;
+}
+
+/* ---------- Abstract ---------- */
+.abstract-info { margin-bottom: 2rem; }
+
+.abstract-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: abstract;
+  max-width: 52rem;
+}
+
+.abstract-list li {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.abstract-title { font-weight: 600; margin: 0 0 0.15rem; }
+
+.abstract-authors { color: var(--muted); font-size: 0.92rem; margin: 0 0 0.15rem; }
+
+.abstract-venue { font-size: 0.9rem; margin: 0; }
+.abstract-venue a { font-weight: 500; margin-right: 0.4rem; }
+
 /* ---------- Timeline ---------- */
 .timeline { display: grid; gap: 0; max-width: 52rem; }
 
@@ -524,6 +586,9 @@ img { max-width: 100%; }
   .card-arrow { display: none; }
 
   .timeline article { grid-template-columns: 1fr; gap: 0.3rem; }
+
+  .keynote-card { grid-template-columns: 1fr; }
+  .portrait-lg { max-width: 14rem; }
 
   .archive-links a { grid-template-columns: 1.8rem minmax(0, 1fr); }
   .archive-links small { display: none; }

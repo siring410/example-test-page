@@ -1,6 +1,6 @@
-# Example Lab — Static Website
+# Symposium Page — Static Website
 
-연구실 홈페이지(한 페이지 스크롤형, 영어). 디자인은 밝은 학술 스타일(버전 B), 섹션 구성은 PROJECT HORIZON 템플릿(버전 A)을 따릅니다. 프레임워크·빌드 도구 없이 HTML/CSS/JS 세 파일만으로 구성되어 있어 GitHub Pages에 바로 배포할 수 있습니다.
+심포지엄 소개 페이지(한 페이지 스크롤형, 영어). 디자인은 밝은 학술 스타일(버전 B), 섹션 구성은 PROJECT HORIZON 템플릿(버전 A)을 따릅니다. 프레임워크·빌드 도구 없이 HTML/CSS/JS 세 파일만으로 구성되어 있어 GitHub Pages에 바로 배포할 수 있습니다.
 
 ## 파일 구성
 
@@ -10,26 +10,30 @@
 | `style.css` | 디자인. 파일 맨 위 `:root` 변수(`--paper`, `--ink`, `--accent`)만 바꿔도 전체 분위기가 바뀜 |
 | `script.js` | 모바일 메뉴 토글, 스크롤 시 네비게이션 활성 표시, 푸터 "Last updated" 자동 날짜 |
 
-## 섹션 구성 (버전 A 구조)
+## 섹션 구성 (GradLINK 심포지엄 구조)
 
-1. **Hero** — 연구실 한 줄 소개 + 위치/설립연도 키워드
+1. **Hero** — 심포지엄명, 주제, 일시/신청 기간/이벤트 링크 + Abstract·Speakers·Committee·Brochure 바로가기
 2. **01 About** — 큰 제목 + 소개문 + 핵심 키워드 칩
-3. **Our Question** — 연구실을 대표하는 질문 (강조 배경)
-4. **02 Research** — 번호가 매겨진 연구 프로젝트 카드 3개
-5. **03 Program** — 연구/활동 타임라인 (Phase 01~04)
-6. **04 Team** — 이니셜 아바타 카드 (사진 불필요)
-7. **05 Archive** — 보고서·자료·영상·데이터 링크 목록
-8. **Contact** — 이메일 + 주소 + 학생 모집 안내
+3. **Welcome Message** — 개회 인사 (강조 배경)
+4. **02 Speakers** — 키노트 스피커 카드 + 트랙별 스피커 그리드
+5. **03 Committee** — 조직위원회 카드 (이니셜 아바타, 사진 불필요)
+6. **04 Program** — 심포지엄 당일 일정 타임라인
+7. **05 Abstract** — 초록 접수 안내 + 채택 초록 목록
+8. **06 Archive** — 브로슈어·녹화·사진·지난 회차 링크
+9. **Contact** — 이메일 + 주소 + 초록 문의 안내
+
+> 참조: https://gradlink.snu.ac.kr/ (SNU 간호대학 GradLINK 심포지엄 사이트)
 
 ## 내용 수정
 
 `index.html`을 열어 `[...]`로 표시된 부분을 실제 정보로 바꾸세요.
 
-- `Example Lab` / `Your University` → 연구실·대학 이름
-- Hero 문장, About 단락, Our Question 문구
-- Research 카드(3개) — 필요하면 `research-card` 블록을 복사해 추가
-- Program 타임라인 항목 — `timeline article` 블록 복사
-- Team 카드 — `person` 블록 복사 (portrait의 이니셜만 바꾸면 됨)
+- `Symposium Horizon` → 심포지엄 이름, Hero의 일시/신청 기간/이벤트 링크
+- About 단락, Welcome Message 문구, 키워드 칩
+- Speakers — `keynote-card` 1개 + `track-heading` + `team-grid` 블록을 트랙별로 복사
+- Committee — `person` 블록 복사 (portrait의 이니셜만 바꾸면 됨)
+- Program — `timeline article` 블록 복사
+- Abstract — 접수 기간·이메일, 채택 초록(`abstract-list li`) 복사
 - Archive 링크, Contact 이메일/주소
 
 ## 로컬에서 확인하기
